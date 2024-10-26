@@ -1,0 +1,86 @@
+html, body {
+    margin: 0; /* Remove margens padrão */
+    height: 100; /* Faz o body ocupar toda a altura da janela */
+    background: linear-gradient(to bottom, #ff7f5fcf, #feb47bd0); /* Gradiente */
+    display: block; /* Padrão, pode ser omitido */
+    text-align: center; /* Centraliza o texto, se necessário */
+}
+
+h1 {
+    color: rgb(235, 214, 170);
+    font-size: 3em;
+    font-family: 'Impact', cursive;
+    text-shadow: 3px 3px 5px rgb(123, 82, 5), 0 0 25px rgb(2, 1, 0);
+    letter-spacing: 4px;
+    margin: 20px 0; /* Adiciona espaçamento acima e abaixo do título */
+}
+        /*caixas de texto*/
+       
+        body {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            background-color: #f0f0f0;
+            margin: 0;
+        }
+
+        h1, h2 {
+            margin: 10px 0;
+        }
+
+        .roleta {
+            position: relative;
+            width: 300px;
+            height: 300px;
+            border-radius: 50%;
+            border: 10px solid #333;
+            overflow: hidden;
+            animation: girar 4s linear infinite; /* Animação de rotação */
+        }
+
+        @keyframes girar {
+            from {
+                transform: rotate(0deg);
+            }
+            to {
+                transform: rotate(360deg);
+            }
+        }
+
+        .parar {
+            animation: none; /* Para a animação */
+        }
+
+        .círculo {
+            width: 100%;
+            height: 100%;
+            position: relative;
+            border-radius: 50%;
+        }
+
+        .setor {
+            position: absolute;
+            width: 50%;
+            height: 50%;
+            background-color: #4caf50;
+            transform-origin: 100% 100%;
+            clip-path: polygon(0 0, 100% 0, 100% 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-weight: bold;
+            font-size: 1.5em;
+        }
+
+        button {
+            margin-top: 20px;
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        /*bomba*/
+        
