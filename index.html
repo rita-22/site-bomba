@@ -7,16 +7,16 @@
     <title>Preços Explosivos</title>
 </head>
 <body>
+    <div class="container">
     <b><h1> Preços Explosivos </h1></b>
     
     <h3>Cada cor representa um artigo. <br> Tens 10 segundos para rodares a roleta e o que sair é o
         que vais automáticamente comprar nesta blackfriday.</br> Depois disso a página explode, boa sorte :))
     </h3>
 
-
     <!-- roleta -->
     <h2>Gire a roleta abaixo:</h2>
-    
+</div>
     <div class="roleta" id="roleta">
         <div class="círculo">
             <div class="setor" style="transform: rotate(0deg); background-color: lightcoral;"></div>
@@ -28,11 +28,11 @@
         </div>
         <div class="seta"></div>
     </div>
-
     <button onclick="document.getElementById('roleta').classList.toggle('parar');">Parar</button>
 
 
     <!-- bomba -->
-     
+    <div id="bomb"></div>
+    <div class="message"> Não vais gastar dinheiro este ano!</div>
 </body>
 </html>

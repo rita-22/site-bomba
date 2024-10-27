@@ -14,6 +14,7 @@ h1 {
     letter-spacing: 4px;
     margin: 20px 0; /* Adiciona espaçamento acima e abaixo do título */
 }
+
         /*caixas de texto*/
        
         body {
@@ -83,4 +84,89 @@ h1 {
         }
 
         /*bomba*/
+        #bomb {
+            width: 100px;
+            height: 100px;
+            position: absolute;
+            animation-name: example;
+            left: 50%; /* Centraliza horizontalmente */
+            top: 20%;  /* Começa um pouco abaixo do topo */
+            transform: translate(-50%, -50%); /* Move para o centro */
+            animation-duration: 2s;
+            animation-delay: 2s;
+            animation-iteration-count: 1;
+            background-size: contain;
+            opacity: 0;
+            animation-timing-function: linear;
+            background-image: url("https://www.pngwing.com/pt/free-png-byisd");
+            z-index: 2; /* Garante que a bomba fique acima do conteúdo */
+          }
+          
+          @keyframes example {
+            0% {
+              opacity: 1;
+              left: 0px;
+              top: 0px;
+              background-image: url("https://www.imagensempng.com.br/wp-content/uploads/2021/09/02-26.png");
+            }
+          
+            45% {
+              background-image: url("https://www.imagensempng.com.br/wp-content/uploads/2021/09/02-26.png");
+            }
+          
+            50% {
+              top: 80vh;
+              opacity: 1;
+              background-image: url("https://www.imagensempng.com.br/wp-content/uploads/2021/09/02-26.png");
+            }
+          
+            70% {
+              top: 80vh;
+              opacity: 0;
+              background-image: url("https://www.imagensempng.com.br/wp-content/uploads/2021/09/02-26.png");
+            }
+            
+          }
+
+          /* Animação de desformatação */
+
+          @keyframes disform {
+            0% {
+                transform: translateY(0);
+            }
+            100% {
+                transform: translateY(100vh); /* Faz todo o conteúdo cair para fora do ecrã */
+            }
+        }
+        
+        /* texto que será desformatado */
+        .container {
+            animation: disform 5s forwards;
+            opacity: 1;
+            animation-delay: 3s; /* Começa após a bomba cair */
+        }
+        
+        /* Mensagem após a desformatação */
+.message {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 2em;
+    color: whitesmoke;
+    opacity: 0; /* Começa invisível */
+    animation: fadeIn 8ms forwards;
+    animation-delay: 5s; /* Aparece após a desformatação */
+}
+
+/* Fade in da mensagem */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1; /* Torna a mensagem visível */
+    }
+        }
+          
         
